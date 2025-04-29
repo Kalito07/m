@@ -1,0 +1,206 @@
+D:\Projects\Movie Catalog\bin\Debug\net9.0\appsettings.Development.json
+D:\Projects\Movie Catalog\bin\Debug\net9.0\appsettings.json
+D:\Projects\Movie Catalog\bin\Debug\net9.0\package-lock.json
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Movie Catalog.staticwebassets.runtime.json
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Movie Catalog.staticwebassets.endpoints.json
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Movie Catalog.exe
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Movie Catalog.deps.json
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Movie Catalog.runtimeconfig.json
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Movie Catalog.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Movie Catalog.pdb
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.AssemblyInfoInputs.cache
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.AssemblyInfo.cs
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.csproj.CoreCompileInputs.cache
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.RazorAssemblyInfo.cache
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.RazorAssemblyInfo.cs
+D:\Projects\Movie Catalog\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Projects\Movie Catalog\obj\Debug\net9.0\scopedcss\bundle\Movie Catalog.styles.css
+D:\Projects\Movie Catalog\obj\Debug\net9.0\scopedcss\projectbundle\Movie Catalog.bundle.scp.css
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\m7tuzo49kz-b9sayid5wm.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\dsh9f5c82u-61n19gt1b8.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\bd8zfcxz18-xtxxf3hu2r.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\r1jsbk5bi8-bqjiyaj88i.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\4tzdor1r0g-c2jlpeoesf.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\coz2xc91em-erw9l3u2r3.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\9kpkb52rf7-aexeepp0ev.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\t4qqqdxk7x-d7shbmvgxk.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\6174q88xjs-ausgxo2sd3.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\prgu75daie-k8d9w2qqmf.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\ubvl82lrpl-cosvhxvwiu.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\60o6wv0n6n-ub07r2b239.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\x4l07t0n9f-fvhpjtyr6v.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\bzf0f9kucr-b7pk76d08c.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\4uvfrw0o4y-fsbi9cje9m.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\sukl0b5nwt-rzd6atqjts.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\tlo39rsjru-ee0r1s7dh0.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\0jlnxs043d-dxx9fxp4il.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\lnhkdwizy9-jd9uben2k1.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\hq67aqavw7-khv3u5hwcm.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\owar2719u1-r4e9w2rdcm.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\qlt2jnfhpi-lcd1t2u6c8.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\chdo2tuxtm-c2oey78nd0.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\nkxe44oric-tdbxkamptv.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\r7kuv0gifi-j5mq2jizvt.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\ziqz0y9dqq-06098lyss8.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\8qsvd69ufs-nvvlpmu67g.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\h5cq8wqb8i-s35ty4nyc5.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\rkup9db8gz-pj5nd1wqec.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\ibqlr1qwgo-46ein0sx1k.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\v8ohq86ya1-v0zj4ognzu.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\fprf3ubrez-37tfw0ft22.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\e2q05zqhvv-hrwsygsryq.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\80z3xg7p4n-pk9g2wxc8p.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\zsh5wctx21-ft3s53vfgj.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\o7ksd4r22v-6cfz1n2cew.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\skiaecrqs5-6pdc2jztkx.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\q0sheta04f-493y06b0oq.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\9qsucul9na-iovd86k7lj.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\9cetd74qd5-vr1egmr9el.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\5binn68weq-kbrnm935zg.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\byxatn2j87-jj8uyg4cgr.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\l4tixjr0s4-y7v9cxd14o.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\mziizf1zdi-notf2xhcfb.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\j16qdq3j58-h1s4sie4z3.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\bvpw46nxkn-63fj8s7r0e.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\aq1wztnarg-0j3bgjxly4.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\x2toojf06d-47otxtyo56.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\y8u16uuszs-4v8eqarkd7.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\jpew5c75i1-356vix0kms.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\7qx7g9kfwo-83jwlth58m.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\9a0ilpejbq-mrlpezrjn3.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\0wzp18m697-lzl9nlhx6b.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\k3vbwrnjmc-ag7o75518u.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\ukrnws1kud-x0q3zqp4vz.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\2akby6x6me-0i3buxo5is.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\wkohk43ue1-o1o13a6vjx.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\kjtiwc1v8n-ttgo8qnofa.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\lavs1wnga8-2z0ns9nrw6.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\2t95jfejp1-muycvpuwrr.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\zuiol4w8gw-87fc7y1x7t.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\smqsu35xgd-mlv21k5csn.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\n1zivjj5qc-zsts0wwful.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\compressed\000fayw86m-zsts0wwful.gz
+D:\Projects\Movie Catalog\obj\Debug\net9.0\staticwebassets.build.json
+D:\Projects\Movie Catalog\obj\Debug\net9.0\staticwebassets.development.json
+D:\Projects\Movie Catalog\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\Projects\Movie Catalog\obj\Debug\net9.0\staticwebassets\msbuild.Movie Catalog.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Projects\Movie Catalog\obj\Debug\net9.0\staticwebassets\msbuild.Movie Catalog.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\Projects\Movie Catalog\obj\Debug\net9.0\staticwebassets\msbuild.build.Movie Catalog.props
+D:\Projects\Movie Catalog\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.Movie Catalog.props
+D:\Projects\Movie Catalog\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.Movie Catalog.props
+D:\Projects\Movie Catalog\obj\Debug\net9.0\staticwebassets.pack.json
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.dll
+D:\Projects\Movie Catalog\obj\Debug\net9.0\refint\Movie Catalog.dll
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.pdb
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.genruntimeconfig.cache
+D:\Projects\Movie Catalog\obj\Debug\net9.0\ref\Movie Catalog.dll
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.sourcelink.json
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Azure.Core.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Azure.Identity.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Humanizer.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\Mono.TextTemplating.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.ClientModel.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.CodeDom.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Composition.Convention.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Composition.Hosting.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Composition.Runtime.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Composition.TypedParts.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Drawing.Common.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Memory.Data.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Runtime.Caching.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Security.Permissions.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\System.Windows.Extensions.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Movie Catalog\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Catalog.csproj.AssemblyReference.cache
+D:\Projects\Movie Catalog\obj\Debug\net9.0\Movie Ca.973A3799.Up2Date
