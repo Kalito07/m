@@ -30,7 +30,7 @@ public class MovieCatalogContext : DbContext
                 }
             }
 
-            base.SaveChanges(); // за да се запише обновеният рейтинг на филма
+            result += base.SaveChanges();
         }
 
         return result;
@@ -43,7 +43,10 @@ public class MovieCatalogContext : DbContext
 
         if (movie != null && movie.Ratings.Any())
         {
-            movie.Rating = movie.Ratings.Average(r => r.RatingValue);
+            movie.Rating = movie.Ratings
+                .Where(r => r.RatingValue >= 1.0 && r.RatingValue <= 10.0)
+                .Average(r => r.RatingValue);
+
         }
     }
 }
