@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Create Genre";
+}
+
+<h1>Create Genre</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Name">Genre Name</label>
+        <input type="text" class="form-control" id="Name" name="name" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a href="@Url.Action("All")" class="btn btn-secondary">Cancel</a>
+</form>

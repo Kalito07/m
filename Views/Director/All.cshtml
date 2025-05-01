@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Movie_Catalog.Data.Models.Director>
+
+@{
+    ViewData["Title"] = "Directors List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var director in Model)
+    {
+        <tr>
+            <td>@director.Name</td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = director.Id })" class="btn btn-primary">Edit</a>
+                <a href="@Url.Action("Delete", new { id = director.Id })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create")" class="btn btn-success">Create New Director</a>

@@ -1,7 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using Movie_Catalog.Services;
+using Movie_Catalog.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IGenreService, GenreService>();
+builder.Services.AddScoped<IDirectorService, DirectorService>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -9,6 +13,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<MovieCatalogContext>(options => options.UseSqlServer(connectionString));
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

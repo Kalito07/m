@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Movie_Catalog.Data.Models.Genre>
+
+@{
+    ViewData["Title"] = "Genres List";
+}
+
+<h1>Genres</h1>
+
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary">Create New Genre</a>
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var genre in Model)
+    {
+        <tr>
+            <td>@genre.Name</td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = genre.Id })" class="btn btn-warning">Edit</a>
+                <a href="@Url.Action("Delete", new { id = genre.Id })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

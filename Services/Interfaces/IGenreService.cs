@@ -11,5 +11,6 @@ namespace Movie_Catalog.Services.Interfaces
         Task AddGenreAsync(string name);
 
         Task EditAsync(int id, string name);
+        Task DeleteAsync(int id); 
     }
 }

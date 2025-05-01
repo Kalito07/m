@@ -49,5 +49,19 @@ namespace Movie_Catalog.Services
 
             await _context.SaveChangesAsync();
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            var genre = await _context.Genres.FindAsync(id);
+
+            if (genre == null)
+            {
+                throw new KeyNotFoundException($"Genre with ID {id} was not found.");
+            }
+
+            _context.Genres.Remove(genre);
+            await _context.SaveChangesAsync();
+        }
+
     }
 }
