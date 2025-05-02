@@ -2,6 +2,9 @@
 
 namespace Movie_Catalog.Services.Interfaces
 {
+    /// <summary>
+    /// Интерфейс за управление на оценки на филми.
+    /// </summary>
     public interface IRatingService
     {
         Task<IEnumerable<Rating>> GetAllRatingsAsync();

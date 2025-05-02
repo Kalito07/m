@@ -10,6 +10,7 @@ namespace Movie_Catalog.Services.Interfaces
 
         Task<Movie> GetMovieByIdAsync(int id);
 
+        Task<Movie> GetMovieDetailsAsync(int id);
         Task EditAsync(int id, string title, string? description, int? releaseYear, int? genreId, int? directorId, double rating);
 
         Task DeleteAsync(int id);

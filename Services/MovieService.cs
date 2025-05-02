@@ -36,6 +36,21 @@ namespace Movie_Catalog.Services
             return movie;
         }
 
+        public async Task<Movie> GetMovieDetailsAsync(int id)
+        {
+            var movie = await _context.Movies
+                .Include(m => m.Genre)
+                .Include(m => m.Director)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (movie == null)
+            {
+                throw new KeyNotFoundException($"Movie with id {id} was not found.");
+            }
+
+            return movie;
+        }
+
         public async Task CreateAsync(string title, string? description, int? releaseYear, int? genreId, int? directorId, double rating)
         {
             var movie = new Movie
@@ -73,5 +88,6 @@ namespace Movie_Catalog.Services
             _context.Movies.Remove(movie);
             await _context.SaveChangesAsync();
         }
+        
     }
 }

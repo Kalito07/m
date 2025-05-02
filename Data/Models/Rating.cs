@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Movie_Catalog.Data.Models
@@ -17,6 +18,8 @@ namespace Movie_Catalog.Data.Models
         [Range(1.0, 10.0)]
         [Column("rating_value")]
         public double RatingValue { get; set; }
+
+        [Column("date_rated")]
 
         [ForeignKey("MovieId")]
         public Movie? Movie { get; set; }

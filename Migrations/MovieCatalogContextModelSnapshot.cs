@@ -111,6 +111,10 @@ namespace Movie_Catalog.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("DateRated")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("date_rated");
+
                     b.Property<int?>("MovieId")
                         .HasColumnType("int")
                         .HasColumnName("movie_id");

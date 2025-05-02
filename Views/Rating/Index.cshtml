@@ -1,18 +1,19 @@
 ﻿@model IEnumerable<Movie_Catalog.Data.Models.Rating>
 
 @{
-    ViewData["Title"] = "Ratings";
+    ViewData["Title"] = "All Ratings";
 }
 
-<h1>All Ratings</h1>
+<h2>All Ratings</h2>
 
-<table class="table">
+<table class="table table-striped">
     <thead>
     <tr>
         <th>ID</th>
-        <th>Movie Title</th>
-        <th>Rating Value</th>
-        <th></th>
+        <th>Movie</th>
+        <th>Rating</th>
+        <th>Date Rated</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -23,25 +24,10 @@
             <td>@rating.Movie?.Title</td>
             <td>@rating.RatingValue</td>
             <td>
-                <a asp-action="Details" asp-route-id="@rating.Id">Details</a> |
-                <form asp-action="Delete" asp-route-id="@rating.Id" method="post" style="display:inline">
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                </form>
+                <a asp-action="Details" asp-route-id="@rating.Id" class="btn btn-info btn-sm">Details</a>
+                <a asp-action="Delete" asp-route-id="@rating.Id" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
     }
     </tbody>
 </table>
-
-<h3>Add Rating</h3>
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label for="movieId">Movie ID</label>
-        <input type="number" id="movieId" class="form-control" name="movieId" required />
-    </div>
-    <div class="form-group">
-        <label for="ratingValue">Rating Value</label>
-        <input type="number" step="0.1" id="ratingValue" class="form-control" name="ratingValue" required />
-    </div>
-    <button type="submit" class="btn btn-primary mt-2">Add</button>
-</form>

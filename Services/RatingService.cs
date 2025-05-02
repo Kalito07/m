@@ -5,6 +5,9 @@ using Movie_Catalog.Services.Interfaces;
 
 namespace Movie_Catalog.Services
 {
+    /// <summary>
+    /// Сервизен клас за работа с оценки.
+    /// </summary>
     public class RatingService : IRatingService
     {
         private readonly MovieCatalogContext _context;
@@ -28,22 +31,13 @@ namespace Movie_Catalog.Services
                 .FirstOrDefaultAsync(r => r.Id == id);
         }
 
-        public async Task<IEnumerable<Rating>> GetRatingsByMovieIdAsync(int movieId)
-        {
-            return await _context.Ratings
-                .Where(r => r.MovieId == movieId)
-                .ToListAsync();
-        }
-
         public async Task AddRatingAsync(int movieId, double ratingValue)
         {
-            var movie = await _context.Movies
-                .Include(m => m.Ratings)
-                .FirstOrDefaultAsync(m => m.Id == movieId);
+            var movie = await _context.Movies.FindAsync(movieId);
 
             if (movie == null)
             {
-                throw new KeyNotFoundException($"Movie with ID {movieId} was not found.");
+                throw new ArgumentException($"Movie with ID {movieId} not found.");
             }
 
             var rating = new Rating
@@ -54,9 +48,6 @@ namespace Movie_Catalog.Services
 
             _context.Ratings.Add(rating);
             await _context.SaveChangesAsync();
-            movie.Rating = movie.Ratings.Append(rating).Average(r => r.RatingValue);
-
-            await _context.SaveChangesAsync();
         }
 
         public async Task DeleteRatingAsync(int id)
@@ -65,30 +56,19 @@ namespace Movie_Catalog.Services
 
             if (rating == null)
             {
-                throw new KeyNotFoundException($"Rating with ID {id} was not found.");
+                throw new KeyNotFoundException($"Rating with ID {id} not found.");
             }
-
-            int? movieId = rating.MovieId;
 
             _context.Ratings.Remove(rating);
             await _context.SaveChangesAsync();
+        }
 
-            // Bewertung im Movie aktualisieren (nach dem Löschen)
-            if (movieId.HasValue)
-            {
-                var movie = await _context.Movies
-                    .Include(m => m.Ratings)
-                    .FirstOrDefaultAsync(m => m.Id == movieId.Value);
-
-                if (movie != null)
-                {
-                    movie.Rating = movie.Ratings.Any()
-                        ? movie.Ratings.Average(r => r.RatingValue)
-                        : 0;
-
-                    await _context.SaveChangesAsync();
-                }
-            }
+        public async Task<IEnumerable<Rating>> GetRatingsByMovieIdAsync(int movieId)
+        {
+            return await _context.Ratings
+                .Where(r => r.MovieId == movieId)
+                .Include(r => r.Movie)
+                .ToListAsync();
         }
     }
 }

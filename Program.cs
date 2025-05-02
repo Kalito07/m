@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IDirectorService, DirectorService>();
+builder.Services.AddScoped<IRatingService, RatingService>();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

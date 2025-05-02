@@ -1,90 +1,68 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Movie_Catalog.Models;
 using Movie_Catalog.Services.Interfaces;
-using System.Diagnostics;
+using Movie_Catalog.Data.Models;
 
 namespace Movie_Catalog.Controllers
 {
     public class RatingController : Controller
     {
         private readonly IRatingService _ratingService;
+        private readonly IMovieService _movieService;
 
-        public RatingController(IRatingService ratingService)
+        public RatingController(IRatingService ratingService, IMovieService movieService)
         {
             _ratingService = ratingService;
+            _movieService = movieService;
         }
 
+        // GET: /Rating
         public async Task<IActionResult> Index()
         {
-            try
-            {
-                var ratings = await _ratingService.GetAllRatingsAsync();
-                return View(ratings);
-            }
-            catch (Exception ex)
-            {
-                return View("Error", new ErrorViewModel
-                {
-                    Message = ex.Message,
-                    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-                });
-            }
+            var ratings = await _ratingService.GetAllRatingsAsync();
+            return View(ratings);
         }
 
+        // GET: /Rating/AddRating/{movieId}
+        public async Task<IActionResult> AddRating(int movieId)
+        {
+            var movie = await _movieService.GetMovieByIdAsync(movieId);
+            if (movie == null) return NotFound();
+
+            return View(movie);
+        }
+
+        // POST: /Rating/AddRating
+        [HttpPost]
+        public async Task<IActionResult> AddRating(int movieId, double ratingValue)
+        {
+            await _ratingService.AddRatingAsync(movieId, ratingValue);
+            return RedirectToAction("Index");
+        }
+
+        // GET: /Rating/Details/{id}
         public async Task<IActionResult> Details(int id)
         {
-            try
-            {
-                var rating = await _ratingService.GetRatingByIdAsync(id);
-                if (rating == null)
-                    return NotFound();
+            var rating = await _ratingService.GetRatingByIdAsync(id);
+            if (rating == null) return NotFound();
 
-                return View(rating);
-            }
-            catch (Exception ex)
-            {
-                return View("Error", new ErrorViewModel
-                {
-                    Message = ex.Message,
-                    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-                });
-            }
+            return View(rating);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(int movieId, double ratingValue)
-        {
-            try
-            {
-                await _ratingService.AddRatingAsync(movieId, ratingValue);
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                return View("Error", new ErrorViewModel
-                {
-                    Message = ex.Message,
-                    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-                });
-            }
-        }
-
-        [HttpPost]
+        // GET: /Rating/Delete/{id}
         public async Task<IActionResult> Delete(int id)
         {
-            try
-            {
-                await _ratingService.DeleteRatingAsync(id);
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                return View("Error", new ErrorViewModel
-                {
-                    Message = ex.Message,
-                    RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-                });
-            }
+            var rating = await _ratingService.GetRatingByIdAsync(id);
+            if (rating == null) return NotFound();
+
+            return View(rating);
+        }
+
+        // POST: /Rating/DeleteConfirmed
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            await _ratingService.DeleteRatingAsync(id);
+            return RedirectToAction("Index");
         }
     }
 }

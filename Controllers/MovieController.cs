@@ -49,6 +49,19 @@ namespace Movie_Catalog.Controllers
             }
         }
 
+        public async Task<IActionResult> Details(int id)
+        {
+            try
+            {
+                var movie = await movieService.GetMovieByIdAsync(id);
+                return View(movie);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create(string title, string? description, int? releaseYear, int? genreId, int? directorId, double rating)
         {
