@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Movie_Catalog.Data;
-using Movie_Catalog.Data.Models;
 using Movie_Catalog.Services.Interfaces;
+using Movie_Catalog.Data.Models;
 
 namespace Movie_Catalog.Services
 {
@@ -33,13 +33,16 @@ namespace Movie_Catalog.Services
 
         public async Task AddRatingAsync(int movieId, double ratingValue)
         {
-            var movie = await _context.Movies.FindAsync(movieId);
+            var movie = await _context.Movies
+                .Include(m => m.Ratings)
+                .FirstOrDefaultAsync(m => m.Id == movieId);
 
             if (movie == null)
             {
-                throw new ArgumentException($"Movie with ID {movieId} not found.");
+                throw new KeyNotFoundException("Movie not found.");
             }
 
+            // Добавяме новия рейтинг
             var rating = new Rating
             {
                 MovieId = movieId,
@@ -47,8 +50,19 @@ namespace Movie_Catalog.Services
             };
 
             _context.Ratings.Add(rating);
+
+            // Записваме промените, за да се създаде rating
+            await _context.SaveChangesAsync();
+
+            // Пресмятаме средната стойност на рейтингите
+            var newAverage = await _context.Ratings
+                .Where(r => r.MovieId == movieId)
+                .AverageAsync(r => r.RatingValue);
+
+            movie.Rating = newAverage;
             await _context.SaveChangesAsync();
         }
+
 
         public async Task DeleteRatingAsync(int id)
         {

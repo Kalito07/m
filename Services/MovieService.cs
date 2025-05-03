@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Movie_Catalog.Data;
 using Movie_Catalog.Data.Models;
 using Movie_Catalog.Services.Interfaces;
 
@@ -13,7 +14,7 @@ namespace Movie_Catalog.Services
             _context = context;
         }
 
-        public async Task<ICollection<Movie>> GetAllMoviesAsync()
+        public async Task<ICollection<Movie>> AllAsync()
         {
             return await _context.Movies
                 .Include(m => m.Genre)
@@ -53,6 +54,14 @@ namespace Movie_Catalog.Services
 
         public async Task CreateAsync(string title, string? description, int? releaseYear, int? genreId, int? directorId, double rating)
         {
+            var exists = await _context.Movies
+                .AnyAsync(m => m.Title == title && m.ReleaseYear == releaseYear);
+
+            if (exists)
+            {
+                throw new InvalidOperationException("A movie with the same title and release year already exists.");
+            }
+
             var movie = new Movie
             {
                 Title = title,
@@ -63,9 +72,10 @@ namespace Movie_Catalog.Services
                 Rating = rating
             };
 
-            await _context.Movies.AddAsync(movie);
+            _context.Movies.Add(movie);
             await _context.SaveChangesAsync();
         }
+
 
         public async Task EditAsync(int id, string title, string? description, int? releaseYear, int? genreId, int? directorId, double rating)
         {

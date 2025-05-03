@@ -1,41 +1,35 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Movie_Catalog.Models;
-using Movie_Catalog.Services.Interfaces;
 using Movie_Catalog.Data.Models;
+using Movie_Catalog.Services.Interfaces;
 
 namespace Movie_Catalog.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IMovieService _movieService;
-        private readonly IRatingService _ratingService;
+        private readonly IHomeService _homeService;
 
-        public HomeController(IMovieService movieService, IRatingService ratingService)
+        public HomeController(IHomeService homeService)
         {
-            _movieService = movieService;
-            _ratingService = ratingService;
+            _homeService = homeService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var latestMovies = await _movieService.GetLatestMoviesAsync(5);
-            var stats = await _movieService.GetStatisticsAsync();
+            var stats = await _homeService.GetStatisticsAsync();
+            var latestMovies = await _homeService.GetLatestMoviesAsync(5);
 
-            var model = new Home
+            var viewModel = new Home
             {
-                LatestMovies = latestMovies,
                 TotalMovies = stats.TotalMovies,
-                AverageRating = stats.AverageRating
+                AverageRating = stats.AverageRating,
+                LatestMovies = latestMovies.ToList()
             };
 
-            return View(model);
+            return View(viewModel);
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Privacy()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }

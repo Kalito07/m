@@ -1,30 +1,42 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Movie_Catalog.Data.Models;
 using Movie_Catalog.Models;
 using Movie_Catalog.Services.Interfaces;
 
 namespace Movie_Catalog.Controllers
 {
-    public class MovieController(
-        ILogger<MovieController> logger,
-        IMovieService movieService,
-        IGenreService genreService,
-        IDirectorService directorService)
-        : Controller
+    public class MovieController : Controller
     {
-        [HttpGet("/")]
+        private readonly ILogger<MovieController> logger;
+        private readonly IMovieService movieService;
+        private readonly IGenreService genreService;
+        private readonly IDirectorService directorService;
+
+        public MovieController(
+            ILogger<MovieController> logger,
+            IMovieService movieService,
+            IGenreService genreService,
+            IDirectorService directorService)
+        {
+            this.logger = logger;
+            this.movieService = movieService;
+            this.genreService = genreService;
+            this.directorService = directorService;
+        }
+
+        [HttpGet]
         public async Task<IActionResult> All()
         {
             try
             {
-                var movies = await movieService.GetAllMoviesAsync();
+                var movies = await movieService.AllAsync();
                 return View(movies);
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Error fetching all movies.");
+                logger.LogError(ex, "Error retrieving movies.");
                 return View("Error", new ErrorViewModel { Message = ex.Message });
             }
         }
@@ -49,19 +61,6 @@ namespace Movie_Catalog.Controllers
             }
         }
 
-        public async Task<IActionResult> Details(int id)
-        {
-            try
-            {
-                var movie = await movieService.GetMovieByIdAsync(id);
-                return View(movie);
-            }
-            catch (KeyNotFoundException)
-            {
-                return NotFound();
-            }
-        }
-
         [HttpPost]
         public async Task<IActionResult> Create(string title, string? description, int? releaseYear, int? genreId, int? directorId, double rating)
         {
@@ -74,6 +73,20 @@ namespace Movie_Catalog.Controllers
             {
                 logger.LogError(ex, "Error creating movie.");
                 return View("Error", new ErrorViewModel { Message = ex.Message });
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            try
+            {
+                var movie = await movieService.GetMovieByIdAsync(id);
+                return View(movie);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
             }
         }
 
@@ -119,15 +132,16 @@ namespace Movie_Catalog.Controllers
         {
             try
             {
-                await movieService.DeleteAsync(id);
-                return RedirectToAction("All");
+                var movie = await movieService.GetMovieByIdAsync(id);
+                return View(movie);
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, $"Error deleting movie with ID {id}.");
+                logger.LogError(ex, $"Error loading movie with ID {id} for deletion.");
                 return View("Error", new ErrorViewModel { Message = ex.Message });
             }
         }
+
         [HttpPost]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
@@ -139,11 +153,8 @@ namespace Movie_Catalog.Controllers
             catch (Exception ex)
             {
                 logger.LogError(ex, $"Error confirming deletion of movie with ID {id}.");
-                
                 return View("Error", new ErrorViewModel { Message = ex.Message });
             }
         }
-
-
     }
 }

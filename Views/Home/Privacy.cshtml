@@ -1,6 +1,36 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+ViewData["Title"] = "Политика за поверителност";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f4f4f4;
+        padding: 40px;
+    }
+
+    .privacy-container {
+        max-width: 700px;
+        margin: auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #555;
+        font-size: 1rem;
+    }
+</style>
+
+<div class="privacy-container">
+    <h1>@ViewData["Title"]</h1>
+    <p>Вашите лични данни са важни за нас. Използваме ги само за подобряване на услугите ни и не ги споделяме с трети страни.</p>
+</div>

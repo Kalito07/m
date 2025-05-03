@@ -1,5 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Movie_Catalog.Data.Models.Home
+
+@{
+    ViewData["Title"] = "Начална страница";
 }
 
 <!DOCTYPE html>
@@ -7,18 +9,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Guten Tag Welt</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>@ViewData["Title"] - Movie Catalog</title>
+    <style>
+        /* Основни стилове */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f7f7f7, #e6ecf0);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Централен контейнер */
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+            text-align: center;
+        }
+
+        /* Заглавие */
+        .heading {
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        /* Описание */
+        .description {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* CTA бутон */
+        .cta-btn {
+            display: inline-block;
+            background-color: #3778f6;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        .cta-btn:hover {
+            background-color: #245edc;
+            transform: translateY(-2px);
+        }
+
+        /* Статистика и списък */
+        .stats, .latest-movies {
+            margin-top: 2.5rem;
+            text-align: left;
+        }
+        .stats h2, .latest-movies h2 {
+            border-bottom: 3px solid #3778f6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            color: #2c3e50;
+        }
+
+        /* Списък със филми */
+        .movie-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .movie-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            transition: background 0.3s;
+        }
+        .movie-list li:hover {
+            background: #f0faff;
+        }
+        .movie-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #444;
+        }
+        .movie-rating {
+            font-size: 1rem;
+            color: #3778f6;
+        }
+
+       
+    </style>
 </head>
 <body>
-<div class="container">
-    <h1 class="heading">👋 Willkommen – Guten Tag Welt!</h1>
-    <p class="description">
-        Learn about <a href="https://learn.microsoft.com/aspnet/core" class="link">building Web apps with ASP.NET Core</a>.
-    </p>
-    <a href="/home" class="cta-btn">Start Now</a>
-</div>
+    <div class="container">
+        <h1 class="heading">🎬 Movie Catalog</h1>
+        <p class="description">
+            Добре дошли в нашия каталог с филми! Открийте нови заглавия и вижте актуалните статистики.
+        </p>
+
+        <a href="/Movie/All" class="cta-btn">Прегледай всички филми</a>
+
+        <div class="stats">
+            <h2>📊 Статистика</h2>
+            <p><strong>Общ брой филми:</strong> @Model.TotalMovies</p>
+            <p><strong>Средна оценка:</strong> @Model.AverageRating.ToString("0.00")</p>
+        </div>
+
+        <div class="latest-movies">
+            <h2>🆕 Най-нови филми</h2>
+            <ul class="movie-list">
+                @foreach (var movie in Model.LatestMovies)
+                {
+                    <li>
+                        <span class="movie-title">@movie.Title</span>
+                        <span class="movie-rating">@movie.Rating.ToString("0.0") ★</span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
-
-

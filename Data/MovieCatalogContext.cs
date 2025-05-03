@@ -1,52 +1,69 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Movie_Catalog.Data.Models;
 
-public class MovieCatalogContext : DbContext
+namespace Movie_Catalog.Data
 {
-    public MovieCatalogContext(DbContextOptions<MovieCatalogContext> options) : base(options)
-    {
-        
-    }
-    public DbSet<Movie> Movies { get; set; }
-    public DbSet<Director> Directors { get; set; }
-    public DbSet<Genre> Genres { get; set; }
-    public DbSet<Rating> Ratings { get; set; }
-    public override int SaveChanges()
-    {
-        var addedRatings = ChangeTracker.Entries<Rating>()
-            .Where(e => e.State == EntityState.Added)
-            .Select(e => e.Entity)
-            .ToList();
 
-        var result = base.SaveChanges();
-
-        if (addedRatings.Any())
+    public class MovieCatalogContext : DbContext
+    {
+        public MovieCatalogContext(DbContextOptions<MovieCatalogContext> options) : base(options)
         {
-            foreach (var rating in addedRatings)
+
+        }
+
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Director> Directors { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
+
+        public override int SaveChanges()
+        {
+            var addedRatings = ChangeTracker.Entries<Rating>()
+                .Where(e => e.State == EntityState.Added)
+                .Select(e => e.Entity)
+                .ToList();
+
+            var result = base.SaveChanges();
+
+            if (addedRatings.Any())
             {
-                if (rating.MovieId.HasValue)
+                foreach (var rating in addedRatings)
                 {
-                    UpdateMovieRating(rating.MovieId.Value);
+                    if (rating.MovieId.HasValue)
+                    {
+                        UpdateMovieRating(rating.MovieId.Value);
+                    }
                 }
+
+                result += base.SaveChanges();
             }
 
-            result += base.SaveChanges();
+            return result;
         }
 
-        return result;
-    }
-    private void UpdateMovieRating(int movieId)
-    {
-        var movie = Movies
-            .Include(m => m.Ratings)
-            .FirstOrDefault(m => m.Id == movieId);
-
-        if (movie != null && movie.Ratings.Any())
+        private void UpdateMovieRating(int movieId)
         {
-            movie.Rating = movie.Ratings
-                .Where(r => r.RatingValue >= 1.0 && r.RatingValue <= 10.0)
-                .Average(r => r.RatingValue);
+            var movie = Movies
+                .Include(m => m.Ratings)
+                .FirstOrDefault(m => m.Id == movieId);
 
+            if (movie?.Ratings?.Any() == true)
+            {
+                movie.Rating = movie.Ratings
+                    .Where(r => r.RatingValue >= 1.0 && r.RatingValue <= 10.0)
+                    .Average(r => r.RatingValue);
+            }
         }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Movie>()
+                .HasIndex(m => new { m.Title, m.ReleaseYear })
+                .IsUnique();
+
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }

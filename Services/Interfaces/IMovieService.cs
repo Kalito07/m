@@ -4,7 +4,7 @@ namespace Movie_Catalog.Services.Interfaces
 {
     public interface IMovieService
     {
-        Task<ICollection<Movie>> GetAllMoviesAsync();
+        Task<ICollection<Movie>> AllAsync();
 
         Task CreateAsync(string title, string? description, int? releaseYear, int? genreId, int? directorId, double rating);
 

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Movie_Catalog.Data;
 using Movie_Catalog.Services;
 using Movie_Catalog.Services.Interfaces;
 
@@ -7,6 +8,8 @@ builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IDirectorService, DirectorService>();
 builder.Services.AddScoped<IRatingService, RatingService>();
+builder.Services.AddScoped<IHomeService, HomeService>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
